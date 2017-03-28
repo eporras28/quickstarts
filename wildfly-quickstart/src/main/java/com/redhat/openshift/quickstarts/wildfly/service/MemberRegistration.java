@@ -17,12 +17,12 @@
 package com.redhat.openshift.quickstarts.wildfly.service;
 
 import com.redhat.openshift.quickstarts.wildfly.model.Member;
+import org.slf4j.Logger;
 
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import java.util.logging.Logger;
 
 // The @Stateless annotation eliminates the need for manual transaction demarcation
 @Stateless

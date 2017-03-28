@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -77,6 +77,7 @@ public class MemberResourceRESTService {
     public Member lookupMemberById(@PathParam("id") long id) {
         Member member = repository.findById(id);
         if (member == null) {
+            log.error("Unable to find user with id: " + id, new Exception());
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
         return member;
@@ -155,7 +156,7 @@ public class MemberResourceRESTService {
      * @return JAX-RS response containing all violations
      */
     private Response.ResponseBuilder createViolationResponse(Set<ConstraintViolation<?>> violations) {
-        log.fine("Validation completed. violations found: " + violations.size());
+        log.debug("Validation completed. violations found: " + violations.size());
 
         Map<String, String> responseObj = new HashMap<>();
 
