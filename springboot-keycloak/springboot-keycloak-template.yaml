@@ -100,12 +100,12 @@ objects:
             failureThreshold: 10
             httpGet:
               path: /
-              port: web
+              port: 8080
           livenessProbe:
             initialDelaySeconds: 60
             httpGet:
               path: /
-              port: web
+              port: 8080
     triggers:
     - type: ConfigChange
     - imageChangeParams:
