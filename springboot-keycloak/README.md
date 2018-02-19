@@ -5,7 +5,8 @@ integrated.
 
 **Deploy the application**
 ```
-$ oc new-app https://raw.githubusercontent.com/ruromero/quickstarts/master/springboot-keycloak/springboot-keycloak-template.yml
+$ oc new-app https://raw.githubusercontent.com/ruromero/quickstarts/master/springboot-keycloak/springboot-keycloak-template.yaml
+
 --> Deploying template "myproject/springboot-keycloak-template" for "springboot-keycloak-template.yaml" to project myproject
 
      * With parameters:
