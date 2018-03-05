@@ -1,7 +1,7 @@
 const elasticsearch = require('elasticsearch');
 
 function initializeClient() {
-  if(process.env.ES_SECURE !== undefined && process.env.ES_SECURE) {
+  if(process.env.ES_USER !== undefined) {
     return new elasticsearch.Client( {
       host: [
         {
