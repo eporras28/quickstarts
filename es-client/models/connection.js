@@ -1,9 +1,10 @@
 const elasticsearch = require('elasticsearch');
 
-const URL_REGEX = /(https?):\/\/(a-zA-Z0-0\-)+:(0-9)+/
+const URL_REGEX = /(https?):\/\/([a-zA-Z0-9\-]+):([0-9]+)/
 
 function initializeClient() {
-  const parsedUrl = URL_REGEX.exec(process.env.ES_URL);
+  const parsedUrl = URL_REGEX.exec(process.env.ES_HOST);
+  console.log(URL_REGEX.exec(process.env.ES_HOST));
   const protocol = parsedUrl[1];
   const svc = parsedUrl[2];
   const port = parsedUrl[3];
