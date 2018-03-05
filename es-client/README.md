@@ -5,9 +5,11 @@ about books.
 
 The following environment variables can be configured to connect to Elasticsearch:
 
-* **ES_HOST**: Elasticsearch service name (required)
+* **ES_URL**: Elasticsearch url. E.g. *http://elasticsearch:9200* (required)
 * **ES_USER**: If a secured connection is to be used (optional)
 * **ES_PASS**: The password to use to authenticate to Elasticsearch (optional).
+
+If the user and password is set, *https* will be used.
 
 ## Usage
 
