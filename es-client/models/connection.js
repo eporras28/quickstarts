@@ -5,10 +5,8 @@ function initializeClient() {
     return new elasticsearch.Client( {
       host: [
         {
-          host: process.env.ES_SVC,
-          auth: process.env.ES_USER + ':' + process.env.ES_PASS,
-          protocol: 'https',
-          port: 9200
+          host: process.env.ES_HOST,
+          auth: process.env.ES_USER + ':' + process.env.ES_PASS
         }
       ]
     });
@@ -16,9 +14,7 @@ function initializeClient() {
     return new elasticsearch.Client( {
       host: [
         {
-          host: process.env.ES_SVC,
-          protocol: 'http',
-          port: 9200
+          host: process.env.ES_HOST
         }
       ]
     });

@@ -5,11 +5,9 @@ about books.
 
 The following environment variables can be configured to connect to Elasticsearch:
 
-* **ES_SVC**: Elasticsearch service name (required)
+* **ES_HOST**: Elasticsearch service name (required)
 * **ES_USER**: If a secured connection is to be used (optional)
 * **ES_PASS**: The password to use to authenticate to Elasticsearch (optional).
-
-If the user and password is set, *https* will be used. In both cases, the port to use will be *9200*
 
 ## Usage
 
@@ -38,6 +36,6 @@ $ oc new-app nodejs:6~https://github.com/ruromero/quickstarts --context-dir=es-c
 --> Success
     Build scheduled, use 'oc logs -f bc/es-client' to track its progress.
     Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
-     'oc expose svc/es-client' 
+     'oc expose svc/es-client'
     Run 'oc status' to view your app.
 ```
