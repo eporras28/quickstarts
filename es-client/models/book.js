@@ -32,11 +32,11 @@ function createIndex(err, response) {
             country: {type: "text"},
             imageLink: {
               type: "text",
-              index: "no"
+              index: "false"
             },
             link: {
               type: "text",
-              index: "no"
+              index: "false"
             },
             pages: {type: "long"},
             title: {type: "text"},
